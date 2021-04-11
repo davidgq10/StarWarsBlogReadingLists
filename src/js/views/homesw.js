@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from 'react-bootstrap';
+import { NavbarSW } from '../component/navbarsw'
 
 export const HomeSW = ()=>{
 
@@ -8,19 +8,9 @@ export const HomeSW = ()=>{
     //Planets
     
     return (
+        <NavbarSW />
 
 
 
     )
-}
-
-
-
-const NavbarST = ()=>{
-
- return(
-
-    
- )
-
 }

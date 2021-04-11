@@ -1,39 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navbar, Container, Form, FormControl, Badge, Dropdown } from "react-bootstrap";
 
-export const Navbar = () => {
+export const NavbarSW = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1" />
-					<i className="fab fa-jedi-order" />
-				</Link>
-				<div className="dropdown">
-					<a
-						className="btn btn-primary dropdown-toggle"
-						href="#"
-						role="button"
-						id="dropdownMenuLink"
-						data-toggle="dropdown"
-						aria-haspopup="true"
-						aria-expanded="false">
-						Favorites <span className="badge badge-dark">9</span>
-					</a>
-
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<a className="dropdown-item" href="#">
-							Action
-						</a>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
-					</div>
-				</div>
-			</div>
-		</nav>
+		<Navbar bg="light" className="bg-light justify-content-between">
+			<Container>
+				<Navbar.Brand href="#home">
+					<img
+						src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-1-1.png"
+						width="auto"
+						height="40"
+						className="d-inline-block align-top"
+						alt="React Bootstrap logo"
+					/>
+				</Navbar.Brand>
+				<Form inline>
+					<FormControl type="text" placeholder="Search" className="mr-sm-2" border="warning" />
+					<Dropdown>
+						<Dropdown.Toggle variant="primary" id="dropdown-basic">
+							Favorites <Badge variant="secondary">9</Badge>
+						</Dropdown.Toggle>
+						<Dropdown.Menu>
+							<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+							<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+							<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+						</Dropdown.Menu>
+					</Dropdown>
+				</Form>
+			</Container>
+		</Navbar>
 	);
 };
