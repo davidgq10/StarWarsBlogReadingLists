@@ -3,7 +3,7 @@ import { Navbar, Container, Form, FormControl, Badge, Dropdown } from "react-boo
 
 export const NavbarSW = () => {
 	return (
-		<Navbar bg="light" className="bg-light justify-content-between">
+		<Navbar bg="light" className="bg-light justify-content-between mb-4">
 			<Container>
 				<Navbar.Brand href="#home">
 					<img

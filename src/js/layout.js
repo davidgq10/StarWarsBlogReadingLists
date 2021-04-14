@@ -6,11 +6,11 @@ import Container from "react-bootstrap/Container";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { HomeSW } from "./views/homesw";
 import injectContext from "./store/appContext";
 
 import { NavbarSW } from "./component/navbarsw";
-import { Characters } from "./component/characters";
-import { Footer } from "./component/footer";
+import { Detail } from "./component/detail";
 
 //create your first component
 const Layout = () => {
@@ -23,15 +23,15 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<NavbarSW />
-					<Container>
-						<Characters />
-					</Container>
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<HomeSW />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
+						</Route>
+						<Route exact path="/d">
+							<Detail />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
@@ -40,8 +40,6 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

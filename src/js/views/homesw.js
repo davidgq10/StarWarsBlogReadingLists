@@ -1,18 +1,12 @@
-import React from "react"
-import { NavbarSW } from '../component/navbarsw'
-import { Characters } from '../component/characters'
+import React from "react";
+import { Characters } from "../component/characters";
+import { Planets } from "../component/planets";
 
-export const HomeSW = ()=>{
-
-    //Estructura a crear
-    //Navbar
-    //Characters
-    //Planets
-    
-    return (
-        <div>
-        <NavbarSW />
-        <Characters />
-        </div>
-    );
-}
+export const HomeSW = () => {
+	return (
+		<div>
+			<Characters />
+			<Planets />
+		</div>
+	);
+};
