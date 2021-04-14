@@ -9,6 +9,9 @@ export const HomeSW = ()=>{
     
     return (
         <NavbarSW />
+        <NavbarSW />
+
+
 
 
 
