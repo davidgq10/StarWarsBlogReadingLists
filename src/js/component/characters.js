@@ -1,27 +1,180 @@
-const formatCharacters = () => {
-		for (let uid in characters) {
-			return (
-				<div className="col-4">
-					<div className="card">
-						<img
-							className="img-fluid max-width: 100%; height: 200px"
-							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
-							alt="Card image cap"
+import React from "react";
+import { Table, Card, Button } from "react-bootstrap";
+import "../../styles/characters.scss";
+
+export const Characters = () => {
+	return (
+		<Table responsive>
+			<tr>
+				<th>
+					<Card className="cardstyle">
+						<Card.Img
+							id="img-card-adjust"
+							variant="top"
+							src="https://i.blogs.es/2cc78a/ordenstarwars/450_1000.jpg"
 						/>
-						<div className="card-body">
-							<h5 className="card-title mt-2 mb-4">{characters.name}</h5>
-							<p className="card-text m-1">Gender: Male</p>
-							<p className="card-text m-1">Hair Color: Blond</p>
-							<p className="card-text m-1">Eye Color: Blue</p>
-							<a href="#" className="btn btn-light btn-outline-primary float-left mt-4">
-								Lear more!
-							</a>
-							<button type="button" className="btn btn-outline-warning float-right mt-4">
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>
+								<strong>Nombre:</strong> Holas mucho nombre
+							</Card.Text>
+							<Card.Text>
+								<strong>Gender:</strong> Male
+							</Card.Text>
+							<Card.Text>
+								<strong>Hair Color:</strong> Blond
+							</Card.Text>
+							<Card.Text>
+								<strong>Eye Color:</strong> Blue
+							</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning float-right">
 								<i className="far fa-heart" />
-							</button>
-						</div>
-					</div>
-				</div>
-			);
-		}
-	};
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+
+				<th>
+					<Card style={{ width: "18rem" }}>
+						<Card.Img
+							variant="top"
+							src="https://image.api.playstation.com/cdn/UP1082/PCSE00802_00/RRG7wTtR7CNUpSyV4v1MeUZI30BhkeqO.png"
+						/>
+						<Card.Body>
+							<Card.Title>Card Title</Card.Title>
+							<Card.Text>Nombre</Card.Text>
+							<Card.Text>Gender: Male</Card.Text>
+							<Card.Text>Hair Color: Blond</Card.Text>
+							<Card.Text>Eye Color: Blue</Card.Text>
+							<Button variant="primary">Go somewhere</Button>
+							<Button variant="warning flex-right">
+								<i className="far fa-heart" />
+							</Button>
+						</Card.Body>
+					</Card>
+				</th>
+			</tr>
+		</Table>
+	);
+};
