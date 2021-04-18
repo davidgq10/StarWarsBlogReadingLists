@@ -1,19 +1,22 @@
 import React from "react";
 import { Navbar, Container, Form, FormControl, Badge, Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const NavbarSW = () => {
 	return (
 		<Navbar bg="light" className="bg-light justify-content-between mb-4">
 			<Container>
-				<Navbar.Brand href="#home">
-					<img
-						src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-1-1.png"
-						width="auto"
-						height="40"
-						className="d-inline-block align-top"
-						alt="React Bootstrap logo"
-					/>
-				</Navbar.Brand>
+				<Link to="/">
+					<Navbar.Brand href="#home">
+						<img
+							src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-1-1.png"
+							width="auto"
+							height="40"
+							className="d-inline-block align-top"
+							alt="React Bootstrap logo"
+						/>
+					</Navbar.Brand>
+				</Link>
 				<Form inline>
 					<FormControl type="text" placeholder="Search" className="mr-sm-2" border="warning" />
 					<Dropdown>

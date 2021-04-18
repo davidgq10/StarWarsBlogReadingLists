@@ -1,8 +1,16 @@
 import React from "react";
-import { Table, Card, Image, Button, Jumbotron, Container, Row, Col } from "react-bootstrap";
+import { Table, Image, Jumbotron, Container, Row, Col } from "react-bootstrap";
 import "../../styles/characters.scss";
+import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 
-export const Detail = () => {
+
+export const Single = (props) => {
+
+    const {store, actions} = useContext(Context);
+    const params = useParams()
+
 	return (
 		<Container>
 			<Row>
@@ -15,7 +23,7 @@ export const Detail = () => {
 					</Jumbotron>
 				</Col>
 				<Col>
-					<h1>Luke Skywalker</h1>
+					<h1>{store.characters[params.theid].name}</h1>
 					<p>
 						Luke Skywalker fue un humano sensible a la Fuerza y un Maestro Jedi quien, junto a su hermana
 						gemela, la Princesa Leia Organa, luchó en contra del gobierno del Imperio Galáctico durante la
@@ -41,16 +49,20 @@ export const Detail = () => {
 					</thead>
 					<tbody>
 						<tr>
-							<th>Luke Skywalker</th>
-							<th>19bby</th>
-							<th>Male</th>
-							<th>172</th>
-							<th>fair</th>
-							<th>blue</th>
+							<th>store.characters[params.theid].name</th>
+							<th>store.characters[params.theid].birth_year</th>
+							<th>store.characters[params.theid].gender</th>
+							<th>store.characters[params.theid].height</th>
+							<th>store.characters[params.theid].skin_color</th>
+							<th>store.characters[params.theid].eye_color</th>
 						</tr>
 					</tbody>
 				</Table>
 			</Row>
 		</Container>
 	);
+};
+
+Single.propTypes = {
+	match: PropTypes.object
 };

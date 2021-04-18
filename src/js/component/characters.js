@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { Table, Card, Image, Button, Container } from "react-bootstrap";
 import "../../styles/characters.scss";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Characters = () => {
@@ -29,7 +30,9 @@ export const Characters = () => {
 						<Card.Text>
 							<strong>Eye Color:</strong> {item.eye_color}
 						</Card.Text>
-						<Button variant="outline-primary">Learn more!</Button>
+						<Link to={"/single/" + index}>
+							<Button variant="outline-primary">Learn more!</Button>
+						</Link>
 						<Button variant="outline-warning float-right">
 							<i className="far fa-heart" />
 						</Button>

@@ -28,6 +28,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
+				console.log("My chars", json);
 
 				setStore({ characters: json.results });
 			},
@@ -43,6 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
+				console.log("My planets", json);
 
 				setStore({ planets: json.results });
 			},
