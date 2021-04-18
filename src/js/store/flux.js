@@ -13,11 +13,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			characters: []
+			characters: [],
+			planets: []
 		},
 		actions: {
 			fetchCharacters: async function g() {
-				const URL = "https://swapi.dev/api/";
+				const URL = "https://swapi.dev/api/people/";
 				const CONFIG = {
 					method: "GET",
 					headers: {
@@ -28,9 +29,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
 
-				console.log(json);
-
 				setStore({ characters: json.results });
+			},
+
+			fetchPlanets: async function p() {
+				const URL = "https://swapi.dev/api/planets/";
+				const CONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "application/json"
+					}
+				};
+
+				const response = await fetch(URL, CONFIG);
+				const json = await response.json();
+
+				setStore({ planets: json.results });
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
