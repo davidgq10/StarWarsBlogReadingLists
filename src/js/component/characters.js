@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import { Table, Card, Image, Button, Container } from "react-bootstrap";
 import "../../styles/characters.scss";
+import { Context } from "../store/appContext";
 
 export const Characters = () => {
+	const { store, actions } = useContext(Context);
+
+	useEffect(() => {
+		actions.fetchCharacters();
+	}, []);
+
 	return (
 		<Container>
 			<h1>Characters</h1>
