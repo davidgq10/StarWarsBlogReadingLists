@@ -1,10 +1,26 @@
-import React from "react";
-import { Navbar, Container, Form, FormControl, Badge, Dropdown } from "react-bootstrap";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Container, Form, Badge, Dropdown } from "react-bootstrap";
+import { Context } from "../store/appContext";
 
 export const NavbarSW = () => {
+	const { store, actions } = useContext(Context);
+
+	const getFavorites = store.favorites.map((item, index) => {
+		return (
+			<Dropdown.Item className="text-primary" key={index} onClick={() => actions.deleteFavorites(index)}>
+				{item}
+				<i className="fas fa-trash" />
+			</Dropdown.Item>
+		);
+	});
+
+	// const deleteFavorites = index => {
+	// 	actions.deleteFavorites(index);
+	// };
+
 	return (
-		<Navbar bg="light" className="bg-light justify-content-between mb-4">
+		<Navbar bg="light" fixed="top" className="bg-light justify-content-between mb-5">
 			<Container>
 				<Link to="/">
 					<Navbar.Brand href="#home">
@@ -18,16 +34,11 @@ export const NavbarSW = () => {
 					</Navbar.Brand>
 				</Link>
 				<Form inline>
-					<FormControl type="text" placeholder="Search" className="mr-sm-2" border="warning" />
 					<Dropdown>
 						<Dropdown.Toggle variant="primary" id="dropdown-basic">
-							Favorites <Badge variant="secondary">9</Badge>
+							Favorites <Badge variant="secondary">{store.favorites.length}</Badge>
 						</Dropdown.Toggle>
-						<Dropdown.Menu>
-							<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-							<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-							<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-						</Dropdown.Menu>
+						<Dropdown.Menu>{getFavorites}</Dropdown.Menu>
 					</Dropdown>
 				</Form>
 			</Container>
